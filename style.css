@@ -1,0 +1,70 @@
+@font-face{
+    font-family: Chewy;
+    src: url(fonts/Chewy-Regular.ttf);
+}
+
+*{
+    font-family: Chewy;
+    background-color: antiquewhite;
+}
+
+.area{
+    max-height: 400px;
+    max-width: 350px;
+    position: absolute;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    left: 400px;
+}
+
+.book{
+    position: relative;
+    height: 75%;
+    width: 60%;
+    margin: auto;
+    top: 12.5%;
+    left: 20%;
+    box-shadow: 1.5px 1.5px 5px rgba(41, 40, 40, 0.973);
+}
+
+.cover{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-right: 0.7px solid black;
+    background-image: linear-gradient(to right, rgb(20, 19, 19), rgb(58, 51, 51));
+    transform-origin: left;
+    animation: cover1 5s infinite ease-in-out;
+    z-index: 4;
+}
+
+.page{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: -108%;
+    z-index: 3;
+    background-color: white;
+    border-right: 1px solid rgb(70, 64, 64);
+    background-image: linear-gradient(to right, rgb(236, 235, 235), white);
+}
+
+.page p {
+    text-align: center;
+    position: relative;
+    top: 25%;
+    font-size: 24px;
+    background: white;  
+    background-image: linear-gradient(to right, rgb(236, 235, 235), white);
+}
+
+@keyframes cover1 {
+    0%,30%,100%{
+        transform: rotateY(0deg);
+    }
+    50%,80%{
+        transform: rotateY(-145deg);
+    }
+}
+
